@@ -10,13 +10,6 @@ def main():
         passedtime = currenttime - starttime
         time.sleep(1)
         print(passedtime)
-        
-
-
-
-
-
-
 
 
 
