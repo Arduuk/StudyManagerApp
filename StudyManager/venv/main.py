@@ -22,7 +22,7 @@ def StudyLogMaker(studyLog):
     studyInfo = [studyLog.type,studyLog.date.strftime('%x'),studyLog.startTime.strftime('%X'),studyLog.finishTime.strftime('%X'),studyLog.StudyTime()]
 
 
-    with open(studyLog.date.strftime('%b')+studyLog.date.strftime('%d')+'.csv' , 'a') as csv_file:
+    with open("StudyLogs/"+studyLog.date.strftime('%b')+studyLog.date.strftime('%d')+'.csv' , 'a') as csv_file:
         csv_writer = csv.writer(csv_file)
 
         csv_writer.writerow(studyInfo)
