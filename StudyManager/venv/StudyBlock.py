@@ -11,4 +11,6 @@ class StudyBlock():
 
     def StudyTime(self):
         studyLenght = self.finishTime - self.startTime
+
+
         return studyLenght

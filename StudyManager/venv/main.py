@@ -1,8 +1,9 @@
-import csv
 import datetime
 from StudyBlock import StudyBlock
+import LogMaker
 #from DaysClass import DaysClass
 import time
+
 
 
 def main():
@@ -20,17 +21,8 @@ def main():
 
     studyblock = StudyBlock(studySub,studyType, startTime.date(), startTime, finishTime, studyInfo)
 
-    StudyLogMaker(studyblock)
+    LogMaker.StudyLogMaker(studyblock)
 
-
-def StudyLogMaker(studyLog):
-    studyInfo = [studyLog.subject, studyLog.type, studyLog.date.strftime('%x'), studyLog.startTime.strftime('%X'),
-                 studyLog.finishTime.strftime('%X'), studyLog.StudyTime(), studyLog.info]
-
-    with open("StudyLogs/" + studyLog.date.strftime('%b') + studyLog.date.strftime('%d') + '.csv', 'a') as csv_file:
-        csv_writer = csv.writer(csv_file, delimiter="\t")
-
-        csv_writer.writerow(studyInfo)
 
 
 if __name__ == '__main__':
